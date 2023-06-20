@@ -1,0 +1,9 @@
+<%= form_with model: @item, url: items_path, local: true do |form| %>
+  <%= form.label :name, 'Ingrediente' %>
+  <%= form.text_field :name, name: 'item[name]' %>
+
+  <%= form.label :quantity, 'Cantidad' %>
+  <%= form.number_field :quantity, name: 'item[quantity]' %>
+
+  <%= form.submit 'Agregar a la lista' %>
+<% end %>
